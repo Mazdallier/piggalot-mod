@@ -1,0 +1,16 @@
+[
+{
+  "modid": "piggalot",
+  "name": "GnomGnom's Piggalot Mod",
+  "description": "A Mod that adds a new Material to the game for armor and tools.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.crookedhill.co.nz",
+  "updateUrl": "",
+  "authors": ["Gnomorian"],
+  "credits": "MIXERRULES for sujesting the mod!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
