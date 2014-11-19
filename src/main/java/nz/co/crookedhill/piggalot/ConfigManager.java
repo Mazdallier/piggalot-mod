@@ -30,6 +30,7 @@ public class ConfigManager {
 	public static int axe = 2228;
 	public static int hoe = 2229;
 	public static int shovel = 2230;
+	public static int multi = 2232;
 	
 	public static int pigtite = 2231;
 	
@@ -48,6 +49,8 @@ public class ConfigManager {
 		int axe= config.getItem("pigtiteaxe", 2228).getInt();
 		int hoe= config.getItem("pigtitehoe", 2229).getInt();
 		int shovel= config.getItem("pigtiteshovel", 2230).getInt();
+		int multi= config.getItem("pigtitepaxel", 2232).getInt();
+		
 		
 		int pigtite = config.getItem("pigtite", 2231).getInt();
 		

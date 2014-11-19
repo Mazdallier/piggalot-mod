@@ -36,7 +36,7 @@ public class GGPCreativeTab extends CreativeTabs
 	@Override
 	public String getTranslatedTabLabel()
 	{
-	return "Syn Tutorial Mod";
+	return "Piggalot Mod";
 	}
 
 }

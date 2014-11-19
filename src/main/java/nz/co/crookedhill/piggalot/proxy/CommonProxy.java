@@ -13,14 +13,12 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
-package nz.co.crookedhill.piggalot;
+package nz.co.crookedhill.piggalot.proxy;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
+public class CommonProxy {
 
-public class ClientProxy extends CommonProxy{
-	@Override
 	public void registerRenderers() {
-		RenderingRegistry.addNewArmourRendererPrefix("PigtiteArmor");
+		
 		
 	}
 }

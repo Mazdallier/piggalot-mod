@@ -19,7 +19,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import nz.co.crookedhill.piggalot.block.GGPBlock;
 import nz.co.crookedhill.piggalot.block.GGPOreGen;
+import nz.co.crookedhill.piggalot.handler.GGPPlayerhandler;
 import nz.co.crookedhill.piggalot.item.GGPItem;
+import nz.co.crookedhill.piggalot.mobs.PMMobs;
+import nz.co.crookedhill.piggalot.proxy.CommonProxy;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -31,9 +35,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.item.EnumArmorMaterial;
 
-@Mod(modid="piggalot",name="GnomGnom's Piggalot Mod",version="0.0.9.1")
+@Mod(modid="piggalot",name="GnomGnom's Piggalot Mod",version="0.0.17.0")
 @NetworkMod(clientSideRequired=true)
 public class Piggalot {
 	
@@ -41,7 +46,7 @@ public class Piggalot {
     public static Piggalot instance;
 	
 	// Says where the client and server 'proxy' code is loaded.
-    @SidedProxy(clientSide="nz.co.crookedhill.piggalot.ClientProxy", serverSide="nz.co.crookedhill.piggalot.CommonProxy")
+    @SidedProxy(clientSide="nz.co.crookedhill.piggalot.proxy.ClientProxy", serverSide="nz.co.crookedhill.piggalot.proxy.CommonProxy")
     public static CommonProxy proxy;
 	
 	public static CreativeTabs piggalottab = new GGPCreativeTab("Piggalot Mod");
@@ -51,7 +56,8 @@ public class Piggalot {
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
 		ConfigManager.init(event);
-		GGPBlock.init();	
+		GGPBlock.init();
+		PMMobs.init();
 	}
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
@@ -59,5 +65,6 @@ public class Piggalot {
 		proxy.registerRenderers();
 		GGPItem.init();
 		GameRegistry.addSmelting(GGPBlock.pigtiteore.blockID, new ItemStack(GGPItem.pigtite), 5F);
+		MinecraftForge.EVENT_BUS.register(GGPPlayerhandler.class);
 	}
 }
