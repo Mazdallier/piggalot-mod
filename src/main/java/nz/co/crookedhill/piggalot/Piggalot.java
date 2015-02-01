@@ -65,6 +65,6 @@ public class Piggalot {
 		proxy.registerRenderers();
 		GGPItem.init();
 		GameRegistry.addSmelting(GGPBlock.pigtiteore.blockID, new ItemStack(GGPItem.pigtite), 5F);
-		MinecraftForge.EVENT_BUS.register(GGPPlayerhandler.class);
+		MinecraftForge.EVENT_BUS.register(new GGPPlayerhandler());
 	}
 }
