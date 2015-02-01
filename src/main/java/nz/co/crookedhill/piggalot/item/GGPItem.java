@@ -18,6 +18,7 @@ package nz.co.crookedhill.piggalot.item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import nz.co.crookedhill.piggalot.ConfigManager;
@@ -80,7 +81,10 @@ public class GGPItem {
 		GameRegistry.addRecipe(new ItemStack(shovel), new Object[] {" p "," s "," s ",'p',pigtite,'s',Item.stick});
 		GameRegistry.addRecipe(new ItemStack(hoe), new Object[] {"pp "," s "," s ",'p',pigtite,'s',Item.stick});
 		GameRegistry.addRecipe(new ItemStack(sword), new Object[] {" p "," p "," s ",'p',pigtite,'s',Item.stick});
-		GameRegistry.addRecipe(new ItemStack(multi), new Object[] {"ash","dpe","rvg",'a',axe,'s',sword,'h',hoe,
+		
+		ItemStack craftMultitool = new ItemStack(multi);
+		craftMultitool.addEnchantment(Enchantment.fortune, 2);
+		GameRegistry.addRecipe(craftMultitool, new Object[] {"ash","dpe","rvg",'a',axe,'s',sword,'h',hoe,
 			'd',Block.blockDiamond,'p',pickaxe,'e',Block.blockEmerald,'r',Block.blockRedstone,'v',shovel,'g',Block.blockGold});
 		
 		GameRegistry.addRecipe(new ItemStack(helmet), new Object[] {"ppp","p p",'p',pigtite});
