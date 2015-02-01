@@ -14,7 +14,6 @@ public class PMMobs {
 		EntityRegistry.registerGlobalEntityID(GGPJo10Trot.class, "Jo10Trot", 106, 113213, 3523523);
 		EntityRegistry.registerGlobalEntityID(GGPMIXERRULES.class, "MIXERRULES", 107, 113213, 3523523);
 		EntityRegistry.registerGlobalEntityID(GGPMonkrules10.class, "Monkrules10", 108, 113213, 3523523);
-		EntityRegistry.registerGlobalEntityID(GGPThajmar.class, "Thajmar", 109, 113213, 3523523);
 		
 		//REGISTER LANGUAGE
 		LanguageRegistry.instance().addStringLocalization("entity.Gnomorian.name", "en_US", "Gnomorian");
@@ -23,7 +22,6 @@ public class PMMobs {
 		LanguageRegistry.instance().addStringLocalization("entity.Jo10Trot.name", "en_US", "Jo10Trot");
 		LanguageRegistry.instance().addStringLocalization("entity.MIXERRULES.name", "en_US", "MIXERRULES");
 		LanguageRegistry.instance().addStringLocalization("entity.Monkrules10.name", "en_US", "Monkrules10");
-		LanguageRegistry.instance().addStringLocalization("entity.Thajmar.name", "en_US", "Thajmar");
 		
 		//REGISTER SPAWNS
 		EntityRegistry.addSpawn(GGPGnomorian.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
@@ -32,7 +30,6 @@ public class PMMobs {
 		EntityRegistry.addSpawn(GGPJo10Trot.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
 		EntityRegistry.addSpawn(GGPMIXERRULES.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
 		EntityRegistry.addSpawn(GGPMonkrules10.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
-		EntityRegistry.addSpawn(GGPThajmar.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
 	}
 
 }

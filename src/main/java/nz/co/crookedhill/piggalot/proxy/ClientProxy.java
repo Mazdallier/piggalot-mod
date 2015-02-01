@@ -21,7 +21,6 @@ import nz.co.crookedhill.piggalot.mobs.GGPGnomorian;
 import nz.co.crookedhill.piggalot.mobs.GGPJo10Trot;
 import nz.co.crookedhill.piggalot.mobs.GGPMIXERRULES;
 import nz.co.crookedhill.piggalot.mobs.GGPMonkrules10;
-import nz.co.crookedhill.piggalot.mobs.GGPThajmar;
 import nz.co.crookedhill.piggalot.mobs.GGPdomonator12;
 import nz.co.crookedhill.piggalot.renderer.GGPMobsRenderer;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -37,6 +36,5 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(GGPJo10Trot.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Jo10Trot"));
 		RenderingRegistry.registerEntityRenderingHandler(GGPMIXERRULES.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "MIXERRULES"));
 		RenderingRegistry.registerEntityRenderingHandler(GGPMonkrules10.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Monkrules10"));
-		RenderingRegistry.registerEntityRenderingHandler(GGPThajmar.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Thajmar"));
 	}
 }

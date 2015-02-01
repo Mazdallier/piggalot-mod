@@ -33,6 +33,8 @@ public class GGPItem {
 	public static Item sword;
 	public static Item multi;
 	
+	public static Item bow;
+	
 	public static Item helmet;
 	public static Item chestplate;
 	public static Item leggings;
@@ -54,6 +56,8 @@ public class GGPItem {
 		leggings = new GGUArmor(ConfigManager.leggings,Piggalot.pigtiteAMaterial,5,2).setUnlocalizedName("PIGTITE_LEGGINGS").setCreativeTab(Piggalot.piggalottab);
 		boots = new GGUArmor(ConfigManager.boots,Piggalot.pigtiteAMaterial,5,3).setUnlocalizedName("PIGTITE_BOOTS").setCreativeTab(Piggalot.piggalottab);
 		
+		bow = new GGPBow(ConfigManager.bow);
+		
 		GameRegistry.registerItem(pigtite, pigtite.getUnlocalizedName());
 		GameRegistry.registerItem(axe, axe.getUnlocalizedName());
 		GameRegistry.registerItem(shovel, shovel.getUnlocalizedName());
@@ -61,6 +65,7 @@ public class GGPItem {
 		GameRegistry.registerItem(hoe, hoe.getUnlocalizedName());
 		GameRegistry.registerItem(sword, sword.getUnlocalizedName());
 		GameRegistry.registerItem(multi, multi.getUnlocalizedName());
+		GameRegistry.registerItem(bow, bow.getUnlocalizedName());
 		
 		LanguageRegistry.addName(pigtite, "Pigtite");
 		LanguageRegistry.addName(axe, "Can I Axe you a question?");
@@ -69,6 +74,7 @@ public class GGPItem {
 		LanguageRegistry.addName(hoe, "Gnomorian's Garden Tool");
 		LanguageRegistry.addName(sword, "Defender of Piggalot");
 		LanguageRegistry.addName(multi, "MLG paxel for noscopeing");
+		LanguageRegistry.addName(bow, "the cowscoper 3000");
 		
 		LanguageRegistry.addName(helmet, "Pigtite Helmet");
 		LanguageRegistry.addName(chestplate, "Pigtite Chestplate");
@@ -86,6 +92,10 @@ public class GGPItem {
 		craftMultitool.addEnchantment(Enchantment.fortune, 2);
 		GameRegistry.addRecipe(craftMultitool, new Object[] {"ash","dpe","rvg",'a',axe,'s',sword,'h',hoe,
 			'd',Block.blockDiamond,'p',pickaxe,'e',Block.blockEmerald,'r',Block.blockRedstone,'v',shovel,'g',Block.blockGold});
+		ItemStack craftBow = new ItemStack(bow);
+		craftBow.addEnchantment(Enchantment.infinity, 1);
+		craftBow.addEnchantment(Enchantment.punch, 2);
+		GameRegistry.addRecipe(craftBow, new Object[] {" ps", "p s", " ps", 'p', pigtite, 's', Item.silk});
 		
 		GameRegistry.addRecipe(new ItemStack(helmet), new Object[] {"ppp","p p",'p',pigtite});
 		GameRegistry.addRecipe(new ItemStack(chestplate), new Object[] {"p p","ppp","ppp",'p',pigtite});
