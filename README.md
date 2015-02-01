@@ -1,9 +1,10 @@
 piggalot-mod
 ============
 
-Mod for Minecraft that adds a new armor and tool type.
+Mod for Minecraft that adds more tools, weapons, npcs etc to minecraft.
 
-### Things needed to add:
- - [ ] [craftingRecipe](http://s16.postimg.org/bfqro4gtt/crafting_for_shickaxe.png?noCache=1416009375) for multitool
- - [ ] npcs for people including myself with custom drops.
- - [ ] spawn eggs of custom npcs.
+This mod is made for the Piggalot Network.
+
+Piggalot is a registered comany and server owned by Mixer; who has asked me to maked this mod under his permission.
+
+The mod is licenced under the the Apache Licence by William Cameron
