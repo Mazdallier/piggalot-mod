@@ -17,11 +17,13 @@ package nz.co.crookedhill.piggalot.item;
 
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
+import nz.co.crookedhill.piggalot.Piggalot;
 
 public class GGPBow extends ItemBow {
 
 	public GGPBow(int par1) {
 		super(par1);
+		this.setCreativeTab(Piggalot.piggalottab);
 	}
 	@Override
 	public int getDamage(ItemStack itemstack)

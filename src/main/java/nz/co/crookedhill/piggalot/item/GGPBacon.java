@@ -26,6 +26,7 @@ public class GGPBacon extends ItemFood
 	public GGPBacon(int id) {
 		super(id, healAmount, saturation, wolfEats);
 		this.setAlwaysEdible();
+		this.setTextureName("piggalot:food_bacon");
 		this.setCreativeTab(Piggalot.piggalottab);
 	}
 }

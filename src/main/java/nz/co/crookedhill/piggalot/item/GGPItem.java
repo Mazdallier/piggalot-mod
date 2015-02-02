@@ -35,6 +35,8 @@ public class GGPItem {
 	
 	public static Item bow;
 	
+	public static Item bacon;
+	
 	public static Item helmet;
 	public static Item chestplate;
 	public static Item leggings;
@@ -56,7 +58,9 @@ public class GGPItem {
 		leggings = new GGUArmor(ConfigManager.leggings,Piggalot.pigtiteAMaterial,5,2).setUnlocalizedName("PIGTITE_LEGGINGS").setCreativeTab(Piggalot.piggalottab);
 		boots = new GGUArmor(ConfigManager.boots,Piggalot.pigtiteAMaterial,5,3).setUnlocalizedName("PIGTITE_BOOTS").setCreativeTab(Piggalot.piggalottab);
 		
-		bow = new GGPBow(ConfigManager.bow);
+		bow = new GGPBow(ConfigManager.bow).setUnlocalizedName("ITEM_BOW");
+		
+		bacon = new GGPBacon(ConfigManager.bacon).setUnlocalizedName("ITEM_BACON");
 		
 		GameRegistry.registerItem(pigtite, pigtite.getUnlocalizedName());
 		GameRegistry.registerItem(axe, axe.getUnlocalizedName());
@@ -66,6 +70,7 @@ public class GGPItem {
 		GameRegistry.registerItem(sword, sword.getUnlocalizedName());
 		GameRegistry.registerItem(multi, multi.getUnlocalizedName());
 		GameRegistry.registerItem(bow, bow.getUnlocalizedName());
+		GameRegistry.registerItem(bacon, bacon.getUnlocalizedName());
 		
 		LanguageRegistry.addName(pigtite, "Pigtite");
 		LanguageRegistry.addName(axe, "Can I Axe you a question?");
@@ -75,6 +80,7 @@ public class GGPItem {
 		LanguageRegistry.addName(sword, "Defender of Piggalot");
 		LanguageRegistry.addName(multi, "MLG paxel for noscopeing");
 		LanguageRegistry.addName(bow, "the cowscoper 3000");
+		LanguageRegistry.addName(bacon, "Bacon");
 		
 		LanguageRegistry.addName(helmet, "Pigtite Helmet");
 		LanguageRegistry.addName(chestplate, "Pigtite Chestplate");
