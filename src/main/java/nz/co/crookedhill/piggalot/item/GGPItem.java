@@ -23,6 +23,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import nz.co.crookedhill.piggalot.ConfigManager;
 import nz.co.crookedhill.piggalot.Piggalot;
+import nz.co.crookedhill.piggalot.mobs.GGPBudder92;
+import nz.co.crookedhill.piggalot.mobs.GGPGnomorian;
+import nz.co.crookedhill.piggalot.mobs.GGPJo10Trot;
+import nz.co.crookedhill.piggalot.mobs.GGPMIXERRULES;
+import nz.co.crookedhill.piggalot.mobs.GGPMonkrules10;
+import nz.co.crookedhill.piggalot.mobs.GGPdomonator12;
 
 public class GGPItem {
 	public static Item pigtite;
@@ -42,6 +48,12 @@ public class GGPItem {
 	public static Item leggings;
 	public static Item boots;
 	
+	public static Item spawnGnomorian;
+	public static Item spawnBudder92;
+	public static Item spawndomonator12;
+	public static Item spawnjo10Trot;
+	public static Item spawnMIXERRULES;
+	public static Item spawnMonkrules10;
 	
 	public static void init() {
 		pigtite = new GGPPigtite(ConfigManager.pigtite).setUnlocalizedName("ITEM_PIGTITE").setCreativeTab(Piggalot.piggalottab);
@@ -62,6 +74,13 @@ public class GGPItem {
 		
 		bacon = new GGPBacon(ConfigManager.bacon).setUnlocalizedName("ITEM_BACON");
 		
+		spawnGnomorian = new GPPSpawnEgg(ConfigManager.spawnGnomorian, GGPGnomorian.class, "egg_Gnomorian");
+		spawnBudder92 = new GPPSpawnEgg(ConfigManager.spawnBudder92, GGPBudder92.class, "egg_Budder92");
+		spawndomonator12 = new GPPSpawnEgg(ConfigManager.spawndomonator12, GGPdomonator12.class, "egg_Domonator12");
+		spawnjo10Trot = new GPPSpawnEgg(ConfigManager.spawnjo10Trot, GGPJo10Trot.class, "egg_Jo10trot");
+		spawnMonkrules10 = new GPPSpawnEgg(ConfigManager.spawnMonkrules10, GGPMonkrules10.class, "egg_Monkrules10");
+		spawnMIXERRULES = new GPPSpawnEgg(ConfigManager.spawnMIXERRULES, GGPMIXERRULES.class, "egg_MIXERRULES");
+		
 		GameRegistry.registerItem(pigtite, pigtite.getUnlocalizedName());
 		GameRegistry.registerItem(axe, axe.getUnlocalizedName());
 		GameRegistry.registerItem(shovel, shovel.getUnlocalizedName());
@@ -71,6 +90,12 @@ public class GGPItem {
 		GameRegistry.registerItem(multi, multi.getUnlocalizedName());
 		GameRegistry.registerItem(bow, bow.getUnlocalizedName());
 		GameRegistry.registerItem(bacon, bacon.getUnlocalizedName());
+		GameRegistry.registerItem(spawnGnomorian, spawnGnomorian.getUnlocalizedName());
+		GameRegistry.registerItem(spawnBudder92, spawnBudder92.getUnlocalizedName());
+		GameRegistry.registerItem(spawndomonator12, spawndomonator12.getUnlocalizedName());
+		GameRegistry.registerItem(spawnjo10Trot, spawnjo10Trot.getUnlocalizedName());
+		GameRegistry.registerItem(spawnMonkrules10, spawnMonkrules10.getUnlocalizedName());
+		GameRegistry.registerItem(spawnMIXERRULES, spawnMIXERRULES.getUnlocalizedName());
 		
 		LanguageRegistry.addName(pigtite, "Pigtite");
 		LanguageRegistry.addName(axe, "Can I Axe you a question?");
@@ -86,6 +111,13 @@ public class GGPItem {
 		LanguageRegistry.addName(chestplate, "Pigtite Chestplate");
 		LanguageRegistry.addName(leggings, "Pigtite Leggings");
 		LanguageRegistry.addName(boots, "Pigtite Boots");
+		
+		LanguageRegistry.addName(spawnGnomorian, "Spawn Gnomorian");
+		LanguageRegistry.addName(spawnBudder92, "Spawn Budder92");
+		LanguageRegistry.addName(spawndomonator12, "Spawn domonator12");
+		LanguageRegistry.addName(spawnjo10Trot, "Spawn jo10Trot");
+		LanguageRegistry.addName(spawnMIXERRULES, "Spawn MIXERRULES");
+		LanguageRegistry.addName(spawnMonkrules10, "Spawn Monkrules10");
 		
 		
 		GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[] {"ppp"," s "," s ",'p',pigtite,'s',Item.stick});

@@ -13,7 +13,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.0.20.2"
+version = "0.0.21.0"
 group= "nz.co.crookedhill.piggalot" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "piggalot"
 

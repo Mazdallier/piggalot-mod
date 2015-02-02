@@ -40,6 +40,13 @@ public class ConfigManager {
 	
 	public static int ore;
 	
+	public static int spawnGnomorian;
+	public static int spawnBudder92;
+	public static int spawndomonator12;
+	public static int spawnjo10Trot;
+	public static int spawnMIXERRULES;
+	public static int spawnMonkrules10;
+	
 	public static void init(FMLPreInitializationEvent event) {
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
@@ -63,6 +70,13 @@ public class ConfigManager {
 		bacon = config.getItem("bacon", 2234).getInt();
 		
 		ore = config.getBlock("pigtiteore", 2232).getInt();
+		
+		spawnGnomorian = config.getItem("spawnGnomorian", 2236).getInt();
+		spawnBudder92 = config.getItem("spawnBudder92", 2236).getInt();
+		spawndomonator12 = config.getItem("spawndomonator12", 2236).getInt();
+		spawnjo10Trot = config.getItem("spawnjo10Trot", 2236).getInt();
+		spawnMIXERRULES = config.getItem("spawnMIXERRULES", 2236).getInt();
+		spawnMonkrules10 = config.getItem("spawnMonkrules10", 2236).getInt();
 		config.save();
 	}
 }

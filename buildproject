@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+export PATH="/usr/lib/jvm/java-7-openjdk/bin"
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
+./gradlew build
