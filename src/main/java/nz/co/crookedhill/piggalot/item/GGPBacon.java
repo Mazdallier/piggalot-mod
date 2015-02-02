@@ -15,7 +15,12 @@
  */
 package nz.co.crookedhill.piggalot.item;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 import nz.co.crookedhill.piggalot.Piggalot;
 
 public class GGPBacon extends ItemFood
@@ -29,4 +34,16 @@ public class GGPBacon extends ItemFood
 		this.setTextureName("piggalot:food_bacon");
 		this.setCreativeTab(Piggalot.piggalottab);
 	}
+	
+	@Override
+	public ItemStack onEaten(ItemStack ItemStack, World World, EntityPlayer EntityPlayer)
+    {
+        --ItemStack.stackSize;
+        EntityPlayer.getFoodStats().addStats(this);
+        World.playSoundAtEntity(EntityPlayer, "random.burp", 0.5F, World.rand.nextFloat() * 0.1F + 0.9F);
+        this.onFoodEaten(ItemStack, World, EntityPlayer);
+        EntityPlayer.addPotionEffect(new PotionEffect(Potion.confusion.id, 2000, 1, false));
+        EntityPlayer.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 2000, 2, false));
+        return ItemStack;
+    }
 }
