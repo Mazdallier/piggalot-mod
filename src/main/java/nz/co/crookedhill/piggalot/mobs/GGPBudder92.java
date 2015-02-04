@@ -20,10 +20,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class GGPBudder92 extends GGPMobNPC {
-	ItemStack heldItem = new ItemStack(Item.swordDiamond);
+	ItemStack heldItem = new ItemStack(Item.swordGold);
 
 	public GGPBudder92(World par1World) {
 		super(par1World, "Budder92");
+		this.setCurrentItemOrArmor(0,heldItem);
 	}
 
 	@Override

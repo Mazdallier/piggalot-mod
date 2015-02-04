@@ -23,12 +23,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class PMMobs {
 	public static void init() {
 		//REGISTER ENTITIES
-		EntityRegistry.registerGlobalEntityID(GGPGnomorian.class, "Gnomorian", 103, 113213, 3523523);
-		EntityRegistry.registerGlobalEntityID(GGPBudder92.class, "Budder92", 104, 113213, 3523523);
-		EntityRegistry.registerGlobalEntityID(GGPdomonator12.class, "domonator12", 105, 113213, 3523523);
-		EntityRegistry.registerGlobalEntityID(GGPJo10Trot.class, "Jo10Trot", 106, 113213, 3523523);
-		EntityRegistry.registerGlobalEntityID(GGPMIXERRULES.class, "MIXERRULES", 107, 113213, 3523523);
-		EntityRegistry.registerGlobalEntityID(GGPMonkrules10.class, "Monkrules10", 108, 113213, 3523523);
+		EntityRegistry.registerGlobalEntityID(GGPGnomorian.class, "Gnomorian", 103);
+		EntityRegistry.registerGlobalEntityID(GGPBudder92.class, "Budder92", 104);
+		EntityRegistry.registerGlobalEntityID(GGPdomonator12.class, "domonator12", 105);
+		EntityRegistry.registerGlobalEntityID(GGPJo10Trot.class, "Jo10Trot", 106);
+		EntityRegistry.registerGlobalEntityID(GGPMIXERRULES.class, "MIXERRULES", 107);
+		EntityRegistry.registerGlobalEntityID(GGPMonkrules10.class, "Monkrules10", 108);
+		EntityRegistry.registerGlobalEntityID(GGPfameblue.class, "fameblue", 109);
 		
 		//REGISTER LANGUAGE
 		LanguageRegistry.instance().addStringLocalization("entity.Gnomorian.name", "en_US", "Gnomorian");
@@ -37,6 +38,7 @@ public class PMMobs {
 		LanguageRegistry.instance().addStringLocalization("entity.Jo10Trot.name", "en_US", "Jo10Trot");
 		LanguageRegistry.instance().addStringLocalization("entity.MIXERRULES.name", "en_US", "MIXERRULES");
 		LanguageRegistry.instance().addStringLocalization("entity.Monkrules10.name", "en_US", "Monkrules10");
+		LanguageRegistry.instance().addStringLocalization("entity.fameblue.name", "en_US", "fameblue");
 		
 		//REGISTER SPAWNS
 		EntityRegistry.addSpawn(GGPGnomorian.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);

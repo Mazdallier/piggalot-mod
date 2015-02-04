@@ -16,6 +16,7 @@
 package nz.co.crookedhill.piggalot.mobs;
 
 import java.util.Random;
+import java.util.UUID;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAISwimming;
@@ -25,6 +26,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
 public abstract class GGPMobNPC extends EntityVillager{
+	
+	protected static Random rand = new Random(UUID.randomUUID().getMostSignificantBits());
 
 	public GGPMobNPC(World par1World, String customName) {
 		super(par1World);

@@ -29,6 +29,7 @@ import nz.co.crookedhill.piggalot.mobs.GGPJo10Trot;
 import nz.co.crookedhill.piggalot.mobs.GGPMIXERRULES;
 import nz.co.crookedhill.piggalot.mobs.GGPMonkrules10;
 import nz.co.crookedhill.piggalot.mobs.GGPdomonator12;
+import nz.co.crookedhill.piggalot.mobs.GGPfameblue;
 
 public class GGPItem {
 	public static Item pigtite;

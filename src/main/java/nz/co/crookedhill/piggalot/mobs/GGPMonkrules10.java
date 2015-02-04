@@ -20,10 +20,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class GGPMonkrules10 extends GGPMobNPC {
-	ItemStack heldItem = new ItemStack(Item.swordDiamond);
+	ItemStack heldItem = new ItemStack(Item.swordGold);
 
 	public GGPMonkrules10(World par1World) {
 		super(par1World, "Monkrules10");
+		this.setCurrentItemOrArmor(0,heldItem);
 	}
 
 	@Override
@@ -34,5 +35,15 @@ public class GGPMonkrules10 extends GGPMobNPC {
 	public ItemStack getHeldItem()
 	{
 		return heldItem;
+	}
+	@Override
+	protected void dropFewItems(boolean byPlayer, int lootingLevel)
+	{
+		if(byPlayer)
+		{
+			int drop = this.getDropItemId();
+			if(drop != 0)
+			this.dropItem(drop, 1);
+		}
 	}
 }

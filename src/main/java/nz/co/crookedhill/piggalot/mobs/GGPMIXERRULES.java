@@ -16,19 +16,28 @@
 package nz.co.crookedhill.piggalot.mobs;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import nz.co.crookedhill.piggalot.item.GGPItem;
 
 public class GGPMIXERRULES extends GGPMobNPC{
+	
+	ItemStack heldItem = new ItemStack(GGPItem.sword);
+	ItemStack headItem = new ItemStack(Item.helmetGold);
 
 	public GGPMIXERRULES(World par1World) {
 		super(par1World, "MIXERRULES");
-		// TODO Auto-generated constructor stub
+		this.setCurrentItemOrArmor(0,heldItem);
+		this.setCurrentItemOrArmor(4,headItem);
 	}
 
 	@Override
 	protected int getDropItemId() {
-		// TODO Auto-generated method stub
-		return Item.beefCooked.itemID;
+		if(rand.nextFloat() <= 0.21f)
+		{
+			return rand.nextInt(1) > 0 ? GGPItem.sword.itemID : Item.helmetGold.itemID;
+		}
+		return 0;
 	}
 
 }
