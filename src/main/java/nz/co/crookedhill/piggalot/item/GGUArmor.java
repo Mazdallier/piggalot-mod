@@ -21,6 +21,7 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import nz.co.crookedhill.piggalot.ConfigManager;
+import nz.co.crookedhill.piggalot.Piggalot;
 
 public class GGUArmor extends ItemArmor{
 
@@ -35,21 +36,22 @@ public class GGUArmor extends ItemArmor{
 			this.setTextureName("piggalot:pigtite_boots");
 		if(par1==ConfigManager.leggings)
 			this.setTextureName("piggalot:pigtite_leggings");
+		this.setCreativeTab(Piggalot.piggalottab);
 	}
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 			int layer) {
-			if (stack.itemID == GGPItem.helmet.itemID
-			|| stack.itemID == GGPItem.chestplate.itemID
-			|| stack.itemID == GGPItem.boots.itemID) {
+		if (stack.itemID == ConfigManager.helmet
+				|| stack.itemID == ConfigManager.chestplate
+				|| stack.itemID == ConfigManager.boots) {
 			return "piggalot:textures/armor/PigtiteArmor_1.png";
-			}
-			if (stack.itemID == GGPItem.leggings.itemID) {
+		}
+		if (stack.itemID == ConfigManager.leggings) {
 			return "piggalot:textures/armor/PigtiteArmor_2.png";
-			} else {
+		} else {
 			return null;
-			}
+		}
 
-			}
+	}
 
 }

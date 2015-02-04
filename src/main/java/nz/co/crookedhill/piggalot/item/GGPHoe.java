@@ -19,6 +19,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemHoe;
+import nz.co.crookedhill.piggalot.Piggalot;
 
 public class GGPHoe extends ItemHoe {
 	
@@ -27,5 +28,7 @@ public class GGPHoe extends ItemHoe {
 	public GGPHoe(int par1, EnumToolMaterial pigtiteMaterial) {
 		super(par1, pigtiteMaterial);
 		this.setTextureName("piggalot:pigtite_hoe");
+		this.setUnlocalizedName("ITEM_PIGTITE_HOE");
+		this.setCreativeTab(Piggalot.piggalottab);
 	}
 }

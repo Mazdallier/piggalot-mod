@@ -2,10 +2,10 @@ package nz.co.crookedhill.piggalot.mobs;
 
 import net.minecraft.world.World;
 
-public class GGPfameblue extends GGPMobNPC{
+public class GGPrducey99 extends GGPMobNPC{
 
-	public GGPfameblue(World par1World) {
-		super(par1World, "flameblue");
+	public GGPrducey99(World par1World) {
+		super(par1World, "rducey99");
 		// TODO Auto-generated constructor stub
 	}
 

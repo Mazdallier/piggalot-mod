@@ -21,11 +21,14 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
+import nz.co.crookedhill.piggalot.Piggalot;
 
 public class GGPAxe extends ItemAxe{
 
 	public GGPAxe(int par1, EnumToolMaterial pigtiteMaterial) {
 		super(par1, pigtiteMaterial);
 		this.setTextureName("piggalot:pigtite_axe");
+		this.setUnlocalizedName("ITEM_PIGTITE_AXE");
+		this.setCreativeTab(Piggalot.piggalottab);
 	}
 }

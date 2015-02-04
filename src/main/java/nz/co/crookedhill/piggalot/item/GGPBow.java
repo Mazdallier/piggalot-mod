@@ -24,6 +24,7 @@ public class GGPBow extends ItemBow {
 	public GGPBow(int par1) {
 		super(par1);
 		this.setCreativeTab(Piggalot.piggalottab);
+		this.setUnlocalizedName("ITEM_PIGTITE_BOW");
 	}
 	@Override
 	public int getDamage(ItemStack itemstack)

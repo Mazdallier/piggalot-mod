@@ -25,5 +25,6 @@ public class GGPSword extends ItemSword {
 	public GGPSword(int par1, EnumToolMaterial pigtiteMaterial) {
 		super(par1, pigtiteMaterial);
 		this.setTextureName("piggalot:pigtite_sword");
+		this.setUnlocalizedName("ITEM_PIGTITE_SWORD");
 	}
 }

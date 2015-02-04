@@ -30,7 +30,7 @@ public class GGPCreativeTab extends CreativeTabs
 	@Override
 	public Item getTabIconItem() 
 	{
-		return GGPItem.pigtite;
+		return GGPItem.getItem("pigtite");
 	}
 	//sets the title/name for the creative tab
 	@Override

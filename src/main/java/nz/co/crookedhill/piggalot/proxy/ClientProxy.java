@@ -30,11 +30,16 @@ public class ClientProxy extends CommonProxy{
 	public void registerRenderers() {
 		RenderingRegistry.addNewArmourRendererPrefix("PigtiteArmor");
 		
-		RenderingRegistry.registerEntityRenderingHandler(GGPGnomorian.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Gnomorian"));
+		/*RenderingRegistry.registerEntityRenderingHandler(GGPGnomorian.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Gnomorian"));
 		RenderingRegistry.registerEntityRenderingHandler(GGPBudder92.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Budder92"));
 		RenderingRegistry.registerEntityRenderingHandler(GGPdomonator12.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "domonator12"));
 		RenderingRegistry.registerEntityRenderingHandler(GGPJo10Trot.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Jo10Trot"));
 		RenderingRegistry.registerEntityRenderingHandler(GGPMIXERRULES.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "MIXERRULES"));
-		RenderingRegistry.registerEntityRenderingHandler(GGPMonkrules10.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Monkrules10"));
+		RenderingRegistry.registerEntityRenderingHandler(GGPMonkrules10.class, new GGPMobsRenderer(new ModelBiped(), 0.4F, "Monkrules10"));*/
+	}
+	@Override
+	public void registerNPC(Class entityClass, GGPMobsRenderer renderer)
+	{
+		RenderingRegistry.registerEntityRenderingHandler(entityClass, renderer);
 	}
 }

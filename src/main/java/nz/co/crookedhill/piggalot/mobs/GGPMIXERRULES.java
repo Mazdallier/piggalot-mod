@@ -22,7 +22,7 @@ import nz.co.crookedhill.piggalot.item.GGPItem;
 
 public class GGPMIXERRULES extends GGPMobNPC{
 	
-	ItemStack heldItem = new ItemStack(GGPItem.sword);
+	ItemStack heldItem = new ItemStack(GGPItem.getItem("sword"));
 	ItemStack headItem = new ItemStack(Item.helmetGold);
 
 	public GGPMIXERRULES(World par1World) {
@@ -35,7 +35,7 @@ public class GGPMIXERRULES extends GGPMobNPC{
 	protected int getDropItemId() {
 		if(rand.nextFloat() <= 0.21f)
 		{
-			return rand.nextInt(1) > 0 ? GGPItem.sword.itemID : Item.helmetGold.itemID;
+			return rand.nextInt(1) > 0 ? heldItem.itemID : Item.helmetGold.itemID;
 		}
 		return 0;
 	}

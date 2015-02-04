@@ -15,10 +15,11 @@
  */
 package nz.co.crookedhill.piggalot.proxy;
 
+import nz.co.crookedhill.piggalot.renderer.GGPMobsRenderer;
+
 public class CommonProxy {
 
-	public void registerRenderers() {
-		
-		
-	}
+	public void registerRenderers() {}
+
+	public void registerNPC(Class entityClass, GGPMobsRenderer renderer) {}
 }

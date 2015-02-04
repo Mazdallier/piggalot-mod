@@ -25,6 +25,8 @@ public class GGPPigtite extends Item {
 	public GGPPigtite(int par1) {
 		super(par1);
 		this.setTextureName("piggalot:pigtite");
+		this.setUnlocalizedName("ITEM_PIGTITE");
+		this.setCreativeTab(Piggalot.piggalottab);
 	}
 
 }

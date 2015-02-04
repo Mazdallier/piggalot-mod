@@ -33,6 +33,7 @@ public class GGPBacon extends ItemFood
 		this.setAlwaysEdible();
 		this.setTextureName("piggalot:food_bacon");
 		this.setCreativeTab(Piggalot.piggalottab);
+		this.setUnlocalizedName("ITEM_PIGTITE_BACON");
 	}
 	
 	@Override

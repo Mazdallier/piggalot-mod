@@ -21,11 +21,14 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemTool;
+import nz.co.crookedhill.piggalot.Piggalot;
 
 public class GGPShovel extends ItemSpade{
 
 	public GGPShovel(int par1, EnumToolMaterial pigtiteMaterial) {
 		super(par1, pigtiteMaterial);
 		this.setTextureName("piggalot:pigtite_shovel");
+		this.setUnlocalizedName("ITEM_PIGTITE_SHOVEL");
+		this.setCreativeTab(Piggalot.piggalottab);
 	}
 }

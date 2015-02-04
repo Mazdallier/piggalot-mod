@@ -15,6 +15,8 @@
  */
 package nz.co.crookedhill.piggalot.item;
 
+import java.util.HashMap;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
@@ -32,113 +34,74 @@ import nz.co.crookedhill.piggalot.mobs.GGPdomonator12;
 import nz.co.crookedhill.piggalot.mobs.GGPfameblue;
 
 public class GGPItem {
-	public static Item pigtite;
-	public static Item axe;
-	public static Item shovel;
-	public static Item pickaxe;
-	public static Item hoe;
-	public static Item sword;
-	public static Item multi;
-	
-	public static Item bow;
-	
-	public static Item bacon;
-	
-	public static Item helmet;
-	public static Item chestplate;
-	public static Item leggings;
-	public static Item boots;
-	
-	public static Item spawnGnomorian;
-	public static Item spawnBudder92;
-	public static Item spawndomonator12;
-	public static Item spawnjo10Trot;
-	public static Item spawnMIXERRULES;
-	public static Item spawnMonkrules10;
+	private static HashMap<String, Item> itemMap = new HashMap();
 	
 	public static void init() {
-		pigtite = new GGPPigtite(ConfigManager.pigtite).setUnlocalizedName("ITEM_PIGTITE").setCreativeTab(Piggalot.piggalottab);
-		axe = new GGPAxe(ConfigManager.axe, Piggalot.pigtiteMaterial).setUnlocalizedName("ITEM_PIGTITE_AXE").setCreativeTab(Piggalot.piggalottab);
-		shovel = new GGPShovel(ConfigManager.shovel, Piggalot.pigtiteMaterial).setUnlocalizedName("ITEM_PIGTITE_SHOVEL").setCreativeTab(Piggalot.piggalottab);
-		pickaxe = new GGPPickaxe(ConfigManager.pickaxe, Piggalot.pigtiteMaterial).setUnlocalizedName("ITEM_PIGTITE_PICKAXE").setCreativeTab(Piggalot.piggalottab);
-		hoe = new GGPHoe(ConfigManager.hoe, Piggalot.pigtiteMaterial).setUnlocalizedName("ITEM_PIGTITE_HOE").setCreativeTab(Piggalot.piggalottab);
-		sword = new GGPSword(ConfigManager.sword, Piggalot.pigtiteMaterial).setUnlocalizedName("ITEM_PIGTITE_SWORD").setCreativeTab(Piggalot.piggalottab);
 		
-		multi = new GGPPaxel(ConfigManager.multi, 0, Piggalot.pigtiteMaterial, Block.blocksList).setUnlocalizedName("ITEM_PIGTITE_PAXEL").setCreativeTab(Piggalot.piggalottab);
+		addItem(new String[] {"pigtite", "Pigtite"}, new GGPPigtite(ConfigManager.pigtite));
+		addItem(new String[] {"axe", "Can I Axe you a question?"}, new GGPAxe(ConfigManager.axe, Piggalot.pigtiteMaterial), new Object[] {"pp ","ps "," s ",'p',getItem("pigtite"),'s',Item.stick});
+		addItem(new String[] {"shovel", "Dave's Shovel"}, new GGPShovel(ConfigManager.shovel, Piggalot.pigtiteMaterial), new Object[] {" p "," s "," s ",'p',getItem("pigtite"),'s',Item.stick});
+		addItem(new String[] {"pickaxe", "Jo10Trot's Mine'O'Matic"}, new GGPPickaxe(ConfigManager.pickaxe, Piggalot.pigtiteMaterial), new Object[] {"ppp"," s "," s ",'p',getItem("pigtite"),'s',Item.stick});
+		addItem(new String[] {"hoe", "Gnomorian's Garden Tool"}, new GGPHoe(ConfigManager.hoe, Piggalot.pigtiteMaterial), new Object[] {"pp "," s "," s ",'p',getItem("pigtite"),'s',Item.stick});
+		addItem(new String[] {"sword", "Defender of Piggalot"}, new GGPSword(ConfigManager.sword, Piggalot.pigtiteMaterial), new Object[] {" p "," p "," s ",'p',getItem("pigtite"),'s',Item.stick});
+		addItem(new String[] {"multi", "MLG paxel for noscopeing"}, new GGPPaxel(ConfigManager.multi, 0, Piggalot.pigtiteMaterial, Block.blocksList));
+		addItem(new String[] {"bow", "the cowscoper 3000"}, new GGPBow(ConfigManager.bow));
 		
-		helmet = new GGUArmor(ConfigManager.helmet,Piggalot.pigtiteAMaterial,5,0).setUnlocalizedName("PIGTITE_HELMET").setCreativeTab(Piggalot.piggalottab);
-		chestplate = new GGUArmor(ConfigManager.chestplate,Piggalot.pigtiteAMaterial,5,1).setUnlocalizedName("PIGTITE_CHESTPLATE").setCreativeTab(Piggalot.piggalottab);
-		leggings = new GGUArmor(ConfigManager.leggings,Piggalot.pigtiteAMaterial,5,2).setUnlocalizedName("PIGTITE_LEGGINGS").setCreativeTab(Piggalot.piggalottab);
-		boots = new GGUArmor(ConfigManager.boots,Piggalot.pigtiteAMaterial,5,3).setUnlocalizedName("PIGTITE_BOOTS").setCreativeTab(Piggalot.piggalottab);
+		addItem(new String[] {"helmet", "Pigtite Helmet"}, new GGUArmor(ConfigManager.helmet, Piggalot.pigtiteAMaterial, 5, 0).setUnlocalizedName("ITEM_PIGTITE_HELMET"), new Object[] {"ppp","p p",'p',getItem("pigtite")});
+		addItem(new String[] {"chestplate", "Pigtite Chestplate"}, new GGUArmor(ConfigManager.chestplate, Piggalot.pigtiteAMaterial, 5, 1).setUnlocalizedName("ITEM_PIGTITE_CHESTPLATE"), new Object[] {"p p","ppp","ppp",'p',getItem("pigtite")});
+		addItem(new String[] {"leggings", "Pigtite Leggings"}, new GGUArmor(ConfigManager.leggings, Piggalot.pigtiteAMaterial, 5, 2).setUnlocalizedName("ITEM_PIGTITE_LEGGINGS"), new Object[] {"ppp","p p","p p",'p',getItem("pigtite")});
+		addItem(new String[] {"boots", "Pigtite Boots"}, new GGUArmor(ConfigManager.boots, Piggalot.pigtiteAMaterial, 5, 3).setUnlocalizedName("ITEM_PIGTITE_BOOTS"), new Object[] {"p p","p p",'p',getItem("pigtite")});
 		
-		bow = new GGPBow(ConfigManager.bow).setUnlocalizedName("ITEM_BOW");
+		addItem(new String[] {"bacon", "Bacon"}, new GGPBacon(ConfigManager.bacon));
 		
-		bacon = new GGPBacon(ConfigManager.bacon).setUnlocalizedName("ITEM_BACON");
+		addItem(new String[] {"spawngnomorian", "Spawn Gnomorian"}, new GPPSpawnEgg(ConfigManager.spawnGnomorian, GGPGnomorian.class, "egg_Gnomorian"));
+		addItem(new String[] {"spawnbudder92", "Spawn Budder92"}, new GPPSpawnEgg(ConfigManager.spawnBudder92, GGPBudder92.class, "egg_Budder92"));
+		addItem(new String[] {"spawndomonator12", "Spawn domonator12"}, new GPPSpawnEgg(ConfigManager.spawndomonator12, GGPdomonator12.class, "egg_Domonator12"));
+		addItem(new String[] {"spawnjo10trot", "Spawn jo10Trot"}, new GPPSpawnEgg(ConfigManager.spawnjo10Trot, GGPJo10Trot.class, "egg_Jo10trot"));
+		addItem(new String[] {"spawnmonkrules10", "Spawn Monkrules10"}, new GPPSpawnEgg(ConfigManager.spawnMonkrules10, GGPMonkrules10.class, "egg_Monkrules10"));
+		addItem(new String[] {"spawnmixerrules", "Spawn MIXERRULES"}, new GPPSpawnEgg(ConfigManager.spawnMIXERRULES, GGPMIXERRULES.class, "egg_MIXERRULES"));
 		
-		spawnGnomorian = new GPPSpawnEgg(ConfigManager.spawnGnomorian, GGPGnomorian.class, "egg_Gnomorian");
-		spawnBudder92 = new GPPSpawnEgg(ConfigManager.spawnBudder92, GGPBudder92.class, "egg_Budder92");
-		spawndomonator12 = new GPPSpawnEgg(ConfigManager.spawndomonator12, GGPdomonator12.class, "egg_Domonator12");
-		spawnjo10Trot = new GPPSpawnEgg(ConfigManager.spawnjo10Trot, GGPJo10Trot.class, "egg_Jo10trot");
-		spawnMonkrules10 = new GPPSpawnEgg(ConfigManager.spawnMonkrules10, GGPMonkrules10.class, "egg_Monkrules10");
-		spawnMIXERRULES = new GPPSpawnEgg(ConfigManager.spawnMIXERRULES, GGPMIXERRULES.class, "egg_MIXERRULES");
-		
-		GameRegistry.registerItem(pigtite, pigtite.getUnlocalizedName());
-		GameRegistry.registerItem(axe, axe.getUnlocalizedName());
-		GameRegistry.registerItem(shovel, shovel.getUnlocalizedName());
-		GameRegistry.registerItem(pickaxe, pickaxe.getUnlocalizedName());
-		GameRegistry.registerItem(hoe, hoe.getUnlocalizedName());
-		GameRegistry.registerItem(sword, sword.getUnlocalizedName());
-		GameRegistry.registerItem(multi, multi.getUnlocalizedName());
-		GameRegistry.registerItem(bow, bow.getUnlocalizedName());
-		GameRegistry.registerItem(bacon, bacon.getUnlocalizedName());
-		GameRegistry.registerItem(spawnGnomorian, spawnGnomorian.getUnlocalizedName());
-		GameRegistry.registerItem(spawnBudder92, spawnBudder92.getUnlocalizedName());
-		GameRegistry.registerItem(spawndomonator12, spawndomonator12.getUnlocalizedName());
-		GameRegistry.registerItem(spawnjo10Trot, spawnjo10Trot.getUnlocalizedName());
-		GameRegistry.registerItem(spawnMonkrules10, spawnMonkrules10.getUnlocalizedName());
-		GameRegistry.registerItem(spawnMIXERRULES, spawnMIXERRULES.getUnlocalizedName());
-		
-		LanguageRegistry.addName(pigtite, "Pigtite");
-		LanguageRegistry.addName(axe, "Can I Axe you a question?");
-		LanguageRegistry.addName(shovel, "Dave's Shovel");
-		LanguageRegistry.addName(pickaxe, "Jo10Trot's Mine'O'Matic");
-		LanguageRegistry.addName(hoe, "Gnomorian's Garden Tool");
-		LanguageRegistry.addName(sword, "Defender of Piggalot");
-		LanguageRegistry.addName(multi, "MLG paxel for noscopeing");
-		LanguageRegistry.addName(bow, "the cowscoper 3000");
-		LanguageRegistry.addName(bacon, "Bacon");
-		
-		LanguageRegistry.addName(helmet, "Pigtite Helmet");
-		LanguageRegistry.addName(chestplate, "Pigtite Chestplate");
-		LanguageRegistry.addName(leggings, "Pigtite Leggings");
-		LanguageRegistry.addName(boots, "Pigtite Boots");
-		
-		LanguageRegistry.addName(spawnGnomorian, "Spawn Gnomorian");
-		LanguageRegistry.addName(spawnBudder92, "Spawn Budder92");
-		LanguageRegistry.addName(spawndomonator12, "Spawn domonator12");
-		LanguageRegistry.addName(spawnjo10Trot, "Spawn jo10Trot");
-		LanguageRegistry.addName(spawnMIXERRULES, "Spawn MIXERRULES");
-		LanguageRegistry.addName(spawnMonkrules10, "Spawn Monkrules10");
-		
-		
-		GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[] {"ppp"," s "," s ",'p',pigtite,'s',Item.stick});
-		GameRegistry.addRecipe(new ItemStack(axe), new Object[] {"pp ","ps "," s ",'p',pigtite,'s',Item.stick});
-		GameRegistry.addRecipe(new ItemStack(shovel), new Object[] {" p "," s "," s ",'p',pigtite,'s',Item.stick});
-		GameRegistry.addRecipe(new ItemStack(hoe), new Object[] {"pp "," s "," s ",'p',pigtite,'s',Item.stick});
-		GameRegistry.addRecipe(new ItemStack(sword), new Object[] {" p "," p "," s ",'p',pigtite,'s',Item.stick});
-		
-		ItemStack craftMultitool = new ItemStack(multi);
+		/* Custom Crafted itemstack with enchantments */
+		ItemStack craftMultitool = new ItemStack(getItem("multi"));
 		craftMultitool.addEnchantment(Enchantment.fortune, 2);
-		GameRegistry.addRecipe(craftMultitool, new Object[] {"ash","dpe","rvg",'a',axe,'s',sword,'h',hoe,
-			'd',Block.blockDiamond,'p',pickaxe,'e',Block.blockEmerald,'r',Block.blockRedstone,'v',shovel,'g',Block.blockGold});
-		ItemStack craftBow = new ItemStack(bow);
+		GameRegistry.addRecipe(craftMultitool, new Object[] {"ash","dpe","rvg",'a',getItem("axe"),'s',getItem("sword"),'h',getItem("hoe"),
+			'd',Block.blockDiamond,'p',getItem("pickaxe"),'e',Block.blockEmerald,'r',Block.blockRedstone,'v',getItem("shovel"),'g',Block.blockGold});
+		
+		/* Custom Crafted itemstack with enchantments */
+		ItemStack craftBow = new ItemStack(getItem("bow"));
 		craftBow.addEnchantment(Enchantment.infinity, 1);
 		craftBow.addEnchantment(Enchantment.punch, 2);
-		GameRegistry.addRecipe(craftBow, new Object[] {" ps", "p s", " ps", 'p', pigtite, 's', Item.silk});
-		
-		GameRegistry.addRecipe(new ItemStack(helmet), new Object[] {"ppp","p p",'p',pigtite});
-		GameRegistry.addRecipe(new ItemStack(chestplate), new Object[] {"p p","ppp","ppp",'p',pigtite});
-		GameRegistry.addRecipe(new ItemStack(leggings), new Object[] {"ppp","p p","p p",'p',pigtite});
-		GameRegistry.addRecipe(new ItemStack(boots), new Object[] {"p p","p p",'p',pigtite});
+		GameRegistry.addRecipe(craftBow, new Object[] {" ps", "p s", " ps", 'p', getItem("pigtite"), 's', Item.silk});
+	}
+	
+	/**
+	 * add item to the hashmap
+	 * @param name
+	 * @param newItem
+	 */
+	private static void addItem(String[] name, Item newItem)
+	{
+		itemMap.put(name[0], newItem);
+		GameRegistry.registerItem(newItem, newItem.getUnlocalizedName());
+		LanguageRegistry.addName(newItem, name[1]);
+	}
+	
+	/**
+	 * add item to the hashMap, with a recipe, name[0]=search map name, name[1]=ingame name
+	 * @param name
+	 * @param newItem
+	 * @param recipe
+	 */
+	private static void addItem(String[] name, Item newItem, Object[] recipe)
+	{
+		itemMap.put(name[0], newItem);
+		GameRegistry.registerItem(newItem, newItem.getUnlocalizedName());
+		LanguageRegistry.addName(newItem, name[1]);
+		GameRegistry.addRecipe(new ItemStack(newItem), recipe);
+	}
+	
+	public static Item getItem(String itemName)
+	{
+		return itemMap.get(itemName);
 	}
 }

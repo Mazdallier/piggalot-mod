@@ -21,7 +21,7 @@ import nz.co.crookedhill.piggalot.block.GGPBlock;
 import nz.co.crookedhill.piggalot.block.GGPOreGen;
 import nz.co.crookedhill.piggalot.handler.GGPPlayerhandler;
 import nz.co.crookedhill.piggalot.item.GGPItem;
-import nz.co.crookedhill.piggalot.mobs.PMMobs;
+import nz.co.crookedhill.piggalot.mobs.GGPMobs;
 import nz.co.crookedhill.piggalot.proxy.CommonProxy;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -38,12 +38,12 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.item.EnumArmorMaterial;
 
-@Mod(modid="piggalot",name="GnomGnom's Piggalot Mod",version="0.0.21.0")
+@Mod(modid="piggalot",name="GnomGnom's Piggalot Mod",version="0.0.22.4")
 @NetworkMod(clientSideRequired=true)
 public class Piggalot {
 	
 	@Instance(value = "piggalot")
-    public static Piggalot instance;
+    public Piggalot instance;
 	
 	// Says where the client and server 'proxy' code is loaded.
     @SidedProxy(clientSide="nz.co.crookedhill.piggalot.proxy.ClientProxy", serverSide="nz.co.crookedhill.piggalot.proxy.CommonProxy")
@@ -57,14 +57,14 @@ public class Piggalot {
 	public static void preInit(FMLPreInitializationEvent event) {
 		ConfigManager.init(event);
 		GGPBlock.init();
-		PMMobs.init();
+		GGPMobs.init();
 	}
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new GGPOreGen());
 		proxy.registerRenderers();
 		GGPItem.init();
-		GameRegistry.addSmelting(GGPBlock.pigtiteore.blockID, new ItemStack(GGPItem.pigtite), 5F);
+		GameRegistry.addSmelting(GGPBlock.pigtiteore.blockID, new ItemStack(GGPItem.getItem("pigtite")), 5F);
 		MinecraftForge.EVENT_BUS.register(new GGPPlayerhandler());
 	}
 }

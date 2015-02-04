@@ -33,6 +33,8 @@ public class GGPPaxel extends ItemPickaxe{
 		super(par1, par3EnumToolMaterial);
 		this.setTextureName("piggalot:pigtite_paxel");
 		this.blocksEffectiveAgainst = par4ArrayOfBlock;
+		this.setUnlocalizedName("ITEM_PIGTITE_MULTI");
+		this.setCreativeTab(Piggalot.piggalottab);
 		
 	}
 	@Override
