@@ -32,6 +32,9 @@ import nz.co.crookedhill.piggalot.mobs.GGPMIXERRULES;
 import nz.co.crookedhill.piggalot.mobs.GGPMonkrules10;
 import nz.co.crookedhill.piggalot.mobs.GGPdomonator12;
 import nz.co.crookedhill.piggalot.mobs.GGPfameblue;
+import nz.co.crookedhill.piggalot.mobs.GGPrducey99;
+import nz.co.crookedhill.piggalot.mobs.GPPMyskitBread;
+import nz.co.crookedhill.piggalot.mobs.GPPVinbullet;
 
 public class GGPItem {
 	private static HashMap<String, Item> itemMap = new HashMap();
@@ -60,6 +63,10 @@ public class GGPItem {
 		addItem(new String[] {"spawnjo10trot", "Spawn jo10Trot"}, new GPPSpawnEgg(ConfigManager.spawnjo10Trot, GGPJo10Trot.class, "egg_Jo10trot"));
 		addItem(new String[] {"spawnmonkrules10", "Spawn Monkrules10"}, new GPPSpawnEgg(ConfigManager.spawnMonkrules10, GGPMonkrules10.class, "egg_Monkrules10"));
 		addItem(new String[] {"spawnmixerrules", "Spawn MIXERRULES"}, new GPPSpawnEgg(ConfigManager.spawnMIXERRULES, GGPMIXERRULES.class, "egg_MIXERRULES"));
+		addItem(new String[] {"fameblue", "Spawn fameblue"}, new GPPSpawnEgg(ConfigManager.spawnfameblue, GGPfameblue.class, "egg_fameblue"));
+		addItem(new String[] {"spawnMyskitBread", "Spawn MyskitBread"}, new GPPSpawnEgg(ConfigManager.spawnMyskitBread, GPPMyskitBread.class, "egg_myskitbread"));
+		addItem(new String[] {"spawnrducey99", "Spawn rducey99"}, new GPPSpawnEgg(ConfigManager.spawnrducey99, GGPrducey99.class, "egg_rducey99"));
+		addItem(new String[] {"spawnVinbullet", "Spawn Vinbullet"}, new GPPSpawnEgg(ConfigManager.spawnVinbullet, GPPVinbullet.class, "egg_Vinbullet"));
 		
 		/* Custom Crafted itemstack with enchantments */
 		ItemStack craftMultitool = new ItemStack(getItem("multi"));

@@ -46,6 +46,10 @@ public class ConfigManager {
 	public static int spawnjo10Trot;
 	public static int spawnMIXERRULES;
 	public static int spawnMonkrules10;
+	public static int spawnfameblue;
+	public static int spawnMyskitBread;
+	public static int spawnrducey99;
+	public static int spawnVinbullet;
 	
 	public static void init(FMLPreInitializationEvent event) {
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
@@ -77,6 +81,12 @@ public class ConfigManager {
 		spawnjo10Trot = config.getItem("spawnjo10Trot", 2236).getInt();
 		spawnMIXERRULES = config.getItem("spawnMIXERRULES", 2236).getInt();
 		spawnMonkrules10 = config.getItem("spawnMonkrules10", 2236).getInt();
+		spawnfameblue = config.getItem("spawnfameblue", 2237).getInt();
+		spawnMyskitBread = config.getItem("spawnMyskitBread", 2238).getInt();
+		spawnrducey99 = config.getItem("spawnrducey99", 2239).getInt();
+		spawnVinbullet = config.getItem("spawnVinbullet", 2240).getInt();
+		
+		
 		config.save();
 	}
 }

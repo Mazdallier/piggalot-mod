@@ -15,6 +15,8 @@
  */
 package nz.co.crookedhill.piggalot.item;
 
+import java.util.List;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -47,4 +49,10 @@ public class GGPBacon extends ItemFood
         EntityPlayer.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 2000, 2, false));
         return ItemStack;
     }
+	
+	@Override
+	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+	{
+		par3List.add("Dave the pig: Plz don't eat me");
+	}
 }

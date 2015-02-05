@@ -37,7 +37,7 @@ public class GGPMobs {
 		registerMob("MIXERRULES", GGPMIXERRULES.class, 107);
 		registerMob("Monkrules10", GGPMonkrules10.class, 108);
 		registerMob("fameblue", GGPfameblue.class, 109);
-		registerMob("MystikBeard", GPPMystikBeard.class, 110);
+		registerMob("MyskitBread", GPPMyskitBread.class, 110);
 		registerMob("rducey99", GGPrducey99.class, 111);
 		registerMob("Vinbullet", GPPVinbullet.class, 112);
 		
@@ -62,7 +62,7 @@ public class GGPMobs {
 		LanguageRegistry.instance().addStringLocalization("entity." + name + ".name", "en_US", name);
 		Piggalot.proxy.registerNPC(mobClass, new GGPMobsRenderer(new ModelBiped(), 0.4F, name));
 		
-		EntityRegistry.addSpawn(mobClass, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(mobClass, 10, 1, 1, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.beach);
 	}
 
 }
