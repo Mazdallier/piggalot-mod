@@ -19,12 +19,15 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import nz.co.crookedhill.piggalot.Piggalot;
 
-public class GGPBow extends ItemBow {
+public class GGPBow extends ItemBow 
+{
 
-	public GGPBow(int par1) {
+	public GGPBow(int par1) 
+	{
 		super(par1);
 		this.setCreativeTab(Piggalot.piggalottab);
 		this.setUnlocalizedName("ITEM_PIGTITE_BOW");
+		this.setTextureName("piggalot:food_bacon");
 	}
 	@Override
 	public int getDamage(ItemStack itemstack)

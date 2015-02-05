@@ -30,7 +30,7 @@ public class GPPSpawnEgg extends Item{
 		Entity entity = null;
 		
 		try {
-			Constructor constr = toSpawn.getConstructor(new Class[] {World.class, String.class});
+			Constructor constr = toSpawn.getConstructor(new Class[] {World.class});
 			entity = (Entity)constr.newInstance(par3World);
 			
 		} catch (InstantiationException e) {
@@ -49,9 +49,7 @@ public class GPPSpawnEgg extends Item{
 		if(entity != null)
 		{
 			par2EntityPlayer.worldObj.spawnEntityInWorld(entity);
-			entity.posX = par4;
-			entity.posY = par5+1;
-			entity.posZ = par6;
+			entity.setPosition(par4, par5+1.0d, par6);
 		}
         return true;
     }
