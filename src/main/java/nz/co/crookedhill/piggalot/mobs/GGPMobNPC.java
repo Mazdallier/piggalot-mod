@@ -18,9 +18,17 @@ package nz.co.crookedhill.piggalot.mobs;
 import java.util.Random;
 import java.util.UUID;
 
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAIMoveIndoors;
+import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
+import net.minecraft.entity.ai.EntityAIOpenDoor;
+import net.minecraft.entity.ai.EntityAIRestrictOpenDoor;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -31,9 +39,18 @@ public abstract class GGPMobNPC extends EntityVillager{
 
 	public GGPMobNPC(World par1World, String customName) {
 		super(par1World);
+		this.getNavigator().setBreakDoors(true);
 		this.getNavigator().setAvoidsWater(true);
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(9, new EntityAIWander(this, 0.6D));
+		this.tasks.addTask(2, new EntityAIMoveIndoors(this));
+		this.tasks.addTask(10, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
+		this.tasks.addTask(4, new EntityAIOpenDoor(this, true));
+		this.tasks.addTask(2, new EntityAIMoveIndoors(this));
+        this.tasks.addTask(3, new EntityAIRestrictOpenDoor(this));
+        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 0.6D));
+        this.tasks.addTask(4, new EntityAIAttackOnCollide(this, 1.0D, true));
+        this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, false));
 		this.setCustomNameTag(customName);
 		
 	}

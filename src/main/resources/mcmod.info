@@ -2,13 +2,13 @@
 {
   "modid": "piggalot",
   "name": "GnomGnom's Piggalot Mod",
-  "description": "A Mod that adds a new Material to the game for armor and tools.",
+  "description": "A Mod that adds a new Material to the game for armor and tools. as well as a bunch of other pig related things.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "http://www.crookedhill.co.nz",
+  "url": "http://www.planetminecraft.com/mod/piggalot-mod/",
   "updateUrl": "",
   "authors": ["Gnomorian"],
-  "credits": "MIXERRULES for sujesting the mod!",
+  "credits": "MIXERRULES for suggesting the mod!",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
