@@ -38,7 +38,7 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.item.EnumArmorMaterial;
 
-@Mod(modid="piggalot",name="GnomGnom's Piggalot Mod",version="0.0.22.4")
+@Mod(modid="piggalot",name="GnomGnom's Piggalot Mod",version="0.0.22.6")
 @NetworkMod(clientSideRequired=true)
 public class Piggalot {
 	
