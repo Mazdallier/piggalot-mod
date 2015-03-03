@@ -11,8 +11,7 @@ public class GPPMyskitBread extends GGPMobNPC{
 
 	@Override
 	protected int getDropItemId() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Item.Bread.itemID;
 	}
 
 }
