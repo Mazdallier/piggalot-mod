@@ -91,3 +91,5 @@ Things to be added
 +Add bacon glass
 
 +Add bacon tree 
+
+(Note: + means to be added. # means working on. X means added. - means removed/discontinued.)
