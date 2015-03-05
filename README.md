@@ -1,5 +1,6 @@
- piggalot-mod
- ============
+============
+piggalot-mod
+============
 Mod name: Piggalot mod
 Mod for: Minecraft
 Currently compatible version: Minecraft 1.6.4
