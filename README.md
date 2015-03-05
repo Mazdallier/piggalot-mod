@@ -36,31 +36,31 @@ C. you must give credit to us in the modpack info
 ===========
 How to install:
 ===========
-Run Minecraft 1.6.4,
-Install recommend version of forge for 1.6.4
-Run Minecraft forge profile
-Move Piggalot mod jar into C:\Users\(your username)\AppData\Roaming\.minecraft
-Restart mc and enjoy! :D
+1.Run Minecraft 1.6.4,
+2.Install recommend version of forge for 1.6.4
+3.Run Minecraft forge profile
+4.Move Piggalot mod jar into C:\Users\(your username)\AppData\Roaming\.minecraft
+5.Restart mc and enjoy! :D
 
 ===============
 Things to be added
 ===============
-Textures:
-Fix bow texture
-Add spawnegg textures
-Add fsh textures (item)
-Add pink fsh (item)
-Add mob pink fish (model)
-Add mob pink fsh (model)
+1.Textures:
++Fix bow texture
++add spawnegg textures
++Add fsh textures (item)
++Add pink fsh (item)
++Add mob pink fish (model)
++Add mob pink fsh (model)
 
-Mobs:
-Add mob fsh
-Add mob pink fsh
-Add mob pink fish
-Add mob kkc 
-Add mob pink Pimpin Poinkers 
+2.Mobs:
++Add mob fsh
++Add mob pink fsh
++Add mob pink fish
++Add mob kkc 
++Add mob pink Pimpin Poinkers 
 
-Blocks: 
-Add bacon block
-Add bacon glass
-Add bacon tree 
+3.Blocks: 
++Add bacon block
++Add bacon glass
++Add bacon tree 
