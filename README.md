@@ -29,9 +29,9 @@ B. Leave a link to the YouTube channel
 C. Tweet video to @mixerrules when it's uploaded
 
 Modpack usage: 
-A. you have permission to use this mod but you must at have a link to the official mod page in the mod list
-B. put a disclaimer that says "any crashes that evolve the Piggalot mod in this modpack are not to be sent to the creators of the mod"
-C. you must give credit to us in the modpack info
+A. you have permission to use this mod but you must at have a link to the official mod page in the mod list.
+B. put a disclaimer that says "any crashes that evolve the Piggalot mod in this modpack are not to be sent to the creators of the mod".
+C. you must give credit to us in the modpack info.
 
 ===========
 How to install:
