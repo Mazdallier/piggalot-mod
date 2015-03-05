@@ -2,10 +2,15 @@
 piggalot-mod
 ============
 Mod name: Piggalot mod
+
 Mod for: Minecraft
+
 Currently compatible version: Minecraft 1.6.4
+
 This mod was made for The Piggalot Gaming Network, (or the Piggalot Network), 
+
 under the permission and request of MIXERRULES,Owner of the Piggalot Gaming Network.
+
 The mod is licenced under the the Apache Licence by William Cameron
 
 ==================================
