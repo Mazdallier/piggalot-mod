@@ -60,9 +60,9 @@ Things to be added
 ===============
 1.Textures:
 
-#Fix bow texture
+*Fix bow texture
 
-#add spawnegg textures
+*add spawnegg textures
 
 +Add fsh textures (item)
 
@@ -82,9 +82,9 @@ Things to be added
 
 +Add mob kkc 
 
-#Add mob pink Pimpin Poinkers 
+*Add mob pink Pimpin Poinkers 
 
-#Add vinbullet boss battle
+*Add vinbullet boss battle
 
 3.Blocks: 
 
@@ -94,4 +94,4 @@ Things to be added
 
 +Add bacon tree 
 
-(Note: + means to be added. # means working on. X means added. - means removed/discontinued.)
+(Note: + means to be added. * means working on. X means added. - means removed/discontinued.)
