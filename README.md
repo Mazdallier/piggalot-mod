@@ -13,6 +13,21 @@ under the permission and request of MIXERRULES,Owner of the Piggalot Gaming Netw
 
 The mod is licenced under the the Apache Licence by William Cameron
 
+===============
+Official links:
+===============
+Official site:
+Http://bit.ly/PiggalotGamingNetworksofficialsit
+
+Twitter:
+Http://Bit.ly/PiggalotGamingNetworksofficialTwitter
+
+Facebook:
+Http://bit.ly/Piggalotgamingnetworksfacebookpage
+
+YouTube:
+Http://bit.ly/piggalotgamingnetworksYT
+
 ==================================
 General terms and usage agreement:
 ==================================
