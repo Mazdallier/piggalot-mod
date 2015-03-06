@@ -109,4 +109,14 @@ Things to be added
 
 +Add bacon tree 
 
+4.tools/armor/weapons:
+
++add raw bacon armor
+
++add raw bacon tools
+
++add baked bacon armor
+
+
+
 (Note: + means to be added. * means working on. X means added. - means removed/discontinued.)
