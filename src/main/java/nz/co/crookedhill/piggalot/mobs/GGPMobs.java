@@ -42,12 +42,12 @@ public class GGPMobs {
 		registerMob("Vinbullet", GPPVinbullet.class, 112);
 		
 		/*//REGISTER SPAWNS
-		EntityRegistry.addSpawn(GGPGnomorian.class, 5, 1, 2, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
-		EntityRegistry.addSpawn(GGPBudder92.class, 5, 1, 2, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
-		EntityRegistry.addSpawn(GGPdomonator12.class, 5, 1, 2, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
-		EntityRegistry.addSpawn(GGPJo10Trot.class, 5, 1, 2, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
-		EntityRegistry.addSpawn(GGPMIXERRULES.class, 5, 1, 2, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
-		EntityRegistry.addSpawn(GGPMonkrules10.class, 5, 1, 2, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);*/
+		EntityRegistry.addSpawn(GGPGnomorian.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(GGPBudder92.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(GGPdomonator12.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(GGPJo10Trot.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(GGPMIXERRULES.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(GGPMonkrules10.class, 10, 2, 6, EnumCreatureType.ambient, BiomeGenBase.plains, BiomeGenBase.desert);*/
 		
 	}
 	/**
